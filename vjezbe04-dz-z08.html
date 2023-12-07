@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+var arr = ['Ovo', 'je', 'My', 'prvi', 'komad', 'OF', 'JAVASCRIPT', 'koda', 'Koji', 'je', 'proradio'];
+var polje=arr.filter(funkcija);
+function funkcija(i){
+	if((i.length>=5) || (/[A-Z]/.test(i))){
+		return i;
+	}
+}
+console.log(polje);
+document.write(polje.join(''));
+
+ </script>
+</body>
+</html>

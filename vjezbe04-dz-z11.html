@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+ const tempDay = ['2023-11-29', -1, 0, -0.5,0.5, 0, 1.2,1.8,2, 3, 4, 6, 9, 12, 7, 6, 6,8,5,4,2,3,2,1,0];
+ function funkcija(x){
+	const datum=x[0];
+	const temperatura=x.slice(1);
+	
+	let min=temperatura[0];
+	let max=temperatura[0];
+	let suma=0;
+	for(let i=0; i<temperatura.length; i++){
+		const temperatura2=temperatura[i];
+		if(temperatura2<min){
+			min=temperatura2;
+		}
+		if(temperatura2>min){
+			max=temperatura2;
+		}
+		suma=suma+temperatura2;
+	}
+	const prosjecna=suma/temperatura.length;
+	
+	console.log("Datum:"+datum);
+	console.log("Najmanja temperatura:"+min+"°C");
+	console.log("Najveća temperatura:"+max+"°C");
+	console.log("Najmanja temperatura:"+prosjecna+"°C");
+	
+ }
+ funkcija(tempDay);
+ 
+ </script>
+</body>
+</html>

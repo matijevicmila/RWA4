@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+
+polje = new Array(1,2,3,4,7,8,5,6,9, 55, 12, 4,85);
+document.write(polje.length);
+console.log(polje);
+document.write('</br>');
+
+for(i=0; i<polje.length-1; i++){
+	for(j=i+1; j<polje.length; j++){
+		if(polje[i]<polje[j]){
+			pom=polje[i];
+			polje[i]=polje[j];
+			polje[j]=pom;
+		}
+	}
+}
+document.write("Polje sortirano s vrijednostima od najvećeg ka najmanjem: ");
+console.log("Polje sortirano s vrijednostima od najvećeg ka najmanjem: ");
+
+for(i=0; i<polje.length; i++){
+	document.write(polje[i]);
+	document.write('<br/>');
+	console.log(polje[i]);
+}
+
+
+for(i=0; i<polje.length-1; i++){
+	for(j=i+1; j<polje.length; j++){
+		if(polje[i]>polje[j]){
+			pom=polje[i];
+			polje[i]=polje[j];
+			polje[j]=pom;
+		}
+	}
+}
+document.write("Polje sortirano s vrijednostima od najmanjeg ka najvećem : ");
+console.log("Polje sortirano s vrijednostima od najmanjeg ka najvećem : ");
+for(i=0; i<polje.length; i++){
+	document.write(polje[i]);
+	document.write('<br/>');
+	console.log(polje[i]);
+}
+
+for(i=0; i<polje.length-1; i++){
+	for(j=i+1; j<polje.length; j++){
+		if(polje[i]>polje[j]){
+			pom=polje[i];
+			polje[i]=polje[j];
+			polje[j]=pom;
+		}
+	}
+}
+polje.pop();
+document.write("Polje sortirano s vrijednostima od najmanjeg ka najvećem bez zadnjeg člana: ");
+console.log("Polje sortirano s vrijednostima od najmanjeg ka najvećem bez zadnjeg člana: ");
+for(i=0; i<polje.length; i++){
+	document.write(polje[i]);
+	document.write('<br/>');
+	console.log(polje[i]);
+}
+polje.push(19,22);
+
+document.write("Polje s nova dva člana 19 i 22: ");
+console.log("Polje s nova dva člana 19 i 22: ");
+
+for(i=0; i<polje.length; i++){
+	document.write(polje[i]);
+	document.write('<br/>');
+	console.log(polje[i]);
+}
+
+polje2=new Array('Banana', 'Orange', 'Apple', 'Mango')
+polje_final=polje2.concat(polje);
+document.write("Spajanje polja 2 i polja u polje final ");
+document.write(polje_final);
+console.log("Spajanje polja 2 i polja u polje final ");
+console.log(polje_final);
+
+
+ </script>
+</body>
+</html>
