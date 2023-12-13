@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>RWA</title>
+<style>
+    #zarulja 
+	{
+		position: absolute;
+		left: 400px;
+		padding: 10px;
+		top: 10px;
+		width: 349px;
+		height: 530px;
+		background-image: url(zarulja_off_2.png);
+		background-repeat: no repeat;
+    }
+
+	#prekidac 
+	{
+		position: absolute;
+		left: 10px;
+		padding: 10px;
+		top: 20px;
+		width: 174px;
+		height: 336px;
+		background-image: url(off-removebg-preview.png);
+		background-repeat: no repeat;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+<div id="prekidac" onclick="upalizarulju()"></div>
+<div id="zarulja"></div>
+<script>
+var trenutno = "ugasena"; 
+function upalizarulju() 
+{
+var z = document.getElementById("zarulja");
+var p = document.getElementById("prekidac");
+if (trenutno === "ugasena") 
+{
+z.style.background = "url('zarulja_on_2.png') no-repeat";
+p.style.background = "url('on-removebg-preview.png') no-repeat";
+trenutno = "upaljena";
+} 
+else 
+{
+z.style.background = "url('zarulja_off_2.png') no-repeat";
+p.style.background = "url('off-removebg-preview') no-repeat";
+trenutno = "ugasena";
+}
+}
+</script>
+</body>
+</html>

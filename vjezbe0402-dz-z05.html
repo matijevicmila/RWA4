@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>RWA</title>
+</head>
+<body>
+<form onsubmit="funkcija(); return false;">
+Unesi registarsku oznaku (u obliku X00-X-000): 
+<input type="text" size=9 id="registarske" name="registarske">
+<button type="submit">Potvrdi</button>
+</form>
+<p></p>
+<script type="text/javascript">
+function funkcija()
+{
+var reg=document.getElementById("registarske").value.toUpperCase();
+var regex=/^[A|E|J|K|M|O|T]{1}[0-9]{2}[-][A|E|J|K|M|O|T]{1}[-][0-9]{3}/;
+if(regex.test(reg))
+{
+alert("Ispravan format.");
+return true;
+}
+else
+{
+alert("Neispravan format.");
+return false;
+}
+}
+</script>
+</body>
+</html>

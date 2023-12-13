@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>RWA</title>
+</head>
+<body>
+<form>
+Unesite dan (01-31): <input type="number" min="1" max="31" id="dan" required> </br> </br>
+Unesite mjesec (01-12): <input type="number" min="1" max="12" id="mjesec" required> </br> </br>
+Unesite godinu (npr. 1970): <input type="number" size="4" id="godina" required> </br> </br>
+<button type="button" onclick="funkcija()">Izračunaj</button></br></form>
+<p></p>
+<script type="text/javascript">
+function funkcija()
+{
+var dan=parseInt(document.getElementById("dan").value);
+if(dan < 1 || dan > 31)
+{
+document.write("Niste unijeli ispravan dan 1-31.");
+}
+var mjesec=parseInt(document.getElementById("mjesec").value);
+if(mjesec < 1 || mjesec > 12)
+{
+document.write("Niste unijeli ispravan mjesec 1-31.");
+}
+var g=parseInt(document.getElementById("godina").value);
+var godina=new Date().getFullYear();
+var god=godina-g;
+var danas = new Date();
+if (danas.getMonth() + 1 < mjesec || (danas.getMonth() + 1 === mjesec && danas.getDate() < d)) 
+{
+	god--;
+}
+alert("Vi imate " + god + " godina.");
+}
+</script>
+</body>
+</html>

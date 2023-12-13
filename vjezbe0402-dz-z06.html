@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>RWA</title>
+</head>
+<body>
+<form>
+X= <input type="number" size="5" id="x"> </br> </br>
+Y= <input type="number" size="5" id="y"> </br> </br>
+<button type="button" onclick="zbroji()">Zbroji</button></br>
+________________________________________ </br> </br>
+REZULTAT = <input type="number" size="5" id="rezultat">
+</form>
+<p></p>
+<script type="text/javascript">
+function zbroji()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultati=document.getElementById("rezultat");
+var rezultat=x+y;
+rezultati.value = rezultat;
+}
+</script>
+</body>
+</html>

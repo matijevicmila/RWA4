@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>RWA</title>
+</head>
+<body>
+<p id="aritmeticka"></p>
+<p id="geometrijska"></p>
+<script type="text/javascript">
+funkcija();
+function funkcija(){
+var brojevi = prompt("Unesi brojeve odvojene zarezom(npr. 1, 4, 16): ").split(", ");
+var aritmeticka=0;
+var geometrijska=0;
+var zbroj=0;
+var umnozak=1;
+for(var i=0; i<brojevi.length; i++)
+{
+	var broj = parseFloat(brojevi[i]);
+	zbroj=zbroj+broj;
+	umnozak=umnozak*broj;
+}
+aritmeticka=zbroj/i;
+geometrijska=Math.pow(umnozak, 1 / brojevi.length);
+document.getElementById("aritmeticka").innerHTML = ("Aritmetička sredina : " + aritmeticka);
+document.getElementById("geometrijska").innerHTML = ("Geometrijska sredina : " + parseInt(geometrijska));
+}
+</script>
+
+</body>
+</html>

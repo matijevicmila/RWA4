@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>RWA</title>
+</head>
+<body>
+<form onsubmit="funkcija(); return false;">Unesite ocjenu od 1 do 5:
+<input type="number" id="ocjena" size=1>
+</form>
+<p id="ispis">Ocjena: </p>
+<script type="text/javascript">
+function funkcija()
+{
+var ocjena=document.getElementById("ocjena").value;
+if(ocjena==1)
+{
+document.getElementById("ispis").innerHTML="1-nedovoljan";
+}
+else if(ocjena==2)
+{
+document.getElementById("ispis").innerHTML="2-dovoljan";
+}
+else if(ocjena==3)
+{
+document.getElementById("ispis").innerHTML="3-dobar";
+}
+else if(ocjena==4)
+{
+document.getElementById("ispis").innerHTML="4-vrlo dobar";
+}
+else if(ocjena==5)
+{
+document.getElementById("ispis").innerHTML="5-odličan";
+}
+else
+{
+document.getElementById("ispis").innerHTML="Niste unijeli ocjenu od 1 do 5";
+}
+}
+</script>
+</body>
+</html>

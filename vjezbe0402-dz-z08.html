@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>RWA</title>
+</head>
+<body>
+<form>
+<input type="number" size="5" id="x"> operand1 </br> </br>
+<input type="number" size="5" id="y"> operand2 </br> </br>
+<button type="button" onclick="zbroji()"> + </button>
+<button type="button" onclick="oduzmi()"> - </button>
+<button type="button" onclick="pomnozi()"> * </button>
+<button type="button" onclick="podijeli()"> / </button>
+</br></br>
+<button type="button" onclick="sinus()"> sin </button>
+<button type="button" onclick="cosinus()"> cos </button>
+<button type="button" onclick="tangens()"> tan </button>
+</br></br>
+<button type="button" onclick="ln()"> ln </button>
+<button type="button" onclick="log()"> log </button>
+</br></br>
+<button type="button" onclick="potencija2()"> ^2 </button>
+<button type="button" onclick="potencija3()"> ^3 </button>
+<button type="button" onclick="potencijan()"> ^n </button>
+</form>
+<p></p>
+<script type="text/javascript">
+function zbroji()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=x+y;
+alert("Rezultat zbrajanja: " + rezultat);
+}
+function oduzmi()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=x-y;
+alert("Rezultat oduzimanja: " + rezultat);
+}
+function pomnozi()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=x*y;
+alert("Rezultat množenja: " + rezultat);
+}
+function podijeli()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=x/y;
+alert("Rezultat dijeljenja: " + rezultat);
+}
+function sinus()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=Math.sin(x);
+alert("Sinus: " + rezultat);
+}
+function cosinus()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=Math.cos(x);
+alert("Cosinus: " + rezultat);
+}
+function tangens()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=Math.tan(x);
+alert("Tangens: " + rezultat);
+}
+function ln()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=Math.log(x);
+alert("Ln: " + rezultat);
+}
+function log()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=Math.log10(x);
+alert("Logaritam: " + rezultat);
+}
+function potencija2()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=Math.pow(x, 2);
+alert("Potencija na 2: " + rezultat);
+}
+function potencija3()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var rezultat=Math.pow(x, 3);
+alert("Potencija na 3: " + rezultat);
+}
+function potencijan()
+{
+var x=parseFloat(document.getElementById("x").value);
+var y=parseFloat(document.getElementById("y").value);
+var n=parseFloat(prompt("Unesite eksponent: "));
+var rezultat=Math.pow(x, n);
+alert("Potencija na " + n + ": " + rezultat);
+}
+</script>
+</body>
+</html>

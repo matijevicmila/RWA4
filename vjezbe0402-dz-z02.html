@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>RWA</title>
+</head>
+<body>
+<button onclick="funkcija()" value="Promijeni pozadinu">Promijeni pozadinu</button>
+<p id="boja"> #000000 </p>
+<script type="text/javascript">
+function funkcija()
+{
+var a = Math. floor(Math. random() * 256);
+var b = Math. floor(Math. random() * 256);
+var c = Math. floor(Math. random() * 256);
+
+var hexR = a.toString(16).padStart(2, '0');
+var hexG = b.toString(16).padStart(2, '0');
+var hexB = c.toString(16).padStart(2, '0');
+var boja = '#' + hexR + hexG + hexB;
+document.body.style.backgroundColor = boja;
+document.getElementById("boja").innerHTML = boja;
+}
+</script>
+</body>
+</html>
